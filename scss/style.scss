@@ -1,0 +1,19 @@
+// Base
+@import 'base/reset';
+@import 'base/variable';
+
+// Mixins (IMPORTANTE: Importar antes que typography)
+@import 'mixins/mixin';
+
+// Base typography (después de mixins)
+@import 'base/typography';
+
+// Componentes
+@import 'components/forms';
+@import 'components/cards';
+@import 'components/gallery';
+
+// Layout
+@import 'layout/contact';
+@import 'layout/responsive';
+@import 'layout/navbar';

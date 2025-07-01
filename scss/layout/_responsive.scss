@@ -1,0 +1,14 @@
+@media (max-width: 600px) {
+    .titulos {
+        font-size: 2rem;
+    }
+
+    .galeria {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .producto-card .card-body {
+        width: 100%;
+    }
+}

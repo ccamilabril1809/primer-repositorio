@@ -1,0 +1,31 @@
+// Estilos personalizados para la navbar de Bt
+.navbar {
+    font-family: $fuente-principal;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+    .navbar-brand {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: $color-texto;
+        transition: color 0.3s;
+
+        &:hover {
+            color: #a87c5f;
+        }
+    }
+
+    .nav-link {
+        font-size: 1.2rem;
+        color: $color-texto;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: #a87c5f;
+        }
+
+        &.active {
+            color: #a87c5f;
+            font-weight: bold;
+        }
+    }
+}
