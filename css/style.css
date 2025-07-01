@@ -130,7 +130,7 @@ input {
 }
 
 .fondo-seccion {
-  background-image: url("../../pages/imagen/torta10.jpg");
+  background-image: url("../pages/imagen/torta10.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
