@@ -3,58 +3,116 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Pastelería | Inicio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pastelería Artesanal en Zona Oeste | Tortas Personalizadas</title>
+  <meta name="description"
+    content="Tortas artesanales en Zona Oeste. Diseños únicos y personalizados para cumpleaños, bodas y eventos. Pedidos especiales y atención con amor.">
+  <meta name="keywords"
+    content="pastelería artesanal, tortas personalizadas, tortas de cumpleaños, tortas de casamiento, repostería, zona oeste, pasteles">
+
+  <!-- Redes Sociales: Open Graph -->
+  <meta property="og:title" content="Pastelería Artesanal | Tortas únicas hechas con amor" />
+  <meta property="og:description"
+    content="Tortas personalizadas para cada ocasión. Explorá nuestras creaciones artesanales." />
+  <meta property="og:image" content="https://ccamilabril1809.github.io/primer-repositorio/imagen/torta.JPEG" />
+  <meta property="og:url" content="https://ccamilabril1809.github.io/primer-repositorio/index.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- Estilos -->
   <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Ribeye+Marrow&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-
-  <!-- HEADER -->
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">Pastelería</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav1">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="nav1">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link" href="pages/catalogo.html">Catálogo</a></li>
-            <li class="nav-item"><a class="nav-link" href="pages/contacto.html">Contacto</a></li>
-          </ul>
-        </div>
+  <!-- NAVBAR -->
+  <header class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Pastelería</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/catalogo.html">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="pages/contacto.html">Contacto</a></li>
+        </ul>
       </div>
-    </nav>
+    </div>
   </header>
 
-  <!-- MAIN -->
-  <main class="container text-center mt-4">
-    <h1 class="titulos">Pasteleria</h1>
-    <h2>Donde cada torta es una obra de arte y cada sabor cuenta una historia. Somos apasionados por la repostería de
-      autor, utilizando ingredientes seleccionados y técnicas artesanales para crear tortas únicas que celebran momentos
-      inolvidables.
-      Explorá nuestra colección, descubrí tus sabores favoritos y dejate tentar por el placer de lo hecho con amor.
-    </h2>
-    <div class="galeria">
-      <img src="pages/imagen/torta1.jpg" alt="Torta 1">
-      <img src="pages/imagen/torta2.jpg" alt="Torta 2">
-      <img src="pages/imagen/torta4.jpg" alt="Torta 3">
-      <img src="pages/imagen/torta6.jpg" alt="Torta 4">
-      <img src="pages/imagen/torta7.jpg" alt="Torta 5">
-      <img src="pages/imagen/torta8.jpg" alt="Torta 6">
-      <img src="pages/imagen/torta9.jpg" alt="Torta 7">
-      <img src="pages/imagen/torta10.jpg" alt="Torta 8">
-
+  <!-- HERO PRINCIPAL -->
+  <section class="hero position-relative text-white text-center">
+    <img src="imagen/torta.JPEG" alt="Torta decorada" class="w-100 hero-img">
+    <div class="hero-text position-absolute top-50 start-50 translate-middle">
+      <h1 class="display-2 fw-bold">Tortas que cuentan historias</h1>
+      <p class="lead">Artesanales, únicas y hechas con amor</p>
     </div>
-  </main>
+  </section>
+
+  <!-- SECCIÓN BIENVENIDA -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row align-items-center text-center text-md-start">
+        <div class="col-md-3 mb-3 mb-md-0">
+          <div class="imagen-cambio">
+            <img src="imagen/torta5.jpg" alt="Torta 1" class="img-principal img-fluid rounded shadow">
+            <img src="imagen/torta8.jpg" alt="Torta 1 Hover" class="img-hover img-fluid rounded shadow">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h2 class="titulo">Bienvenidos a nuestra pastelería</h2>
+          <p>
+            Donde cada torta es una obra de arte. Elaboramos con dedicación y pasión tortas únicas para tus
+            momentos inolvidables. Personalizá tu pedido y dejate tentar por el sabor de lo hecho en casa.
+          </p>
+        </div>
+        <div class="col-md-3">
+          <div class="imagen-cambio">
+            <img src="imagen/torta14.jpg" alt="Torta 2" class="img-principal img-fluid rounded shadow">
+            <img src="imagen/torta7.jpg" alt="Torta 2 Hover" class="img-hover img-fluid rounded shadow">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA DE TORTAS -->
+  <section class="galeria-fondo py-5">
+    <div class="container">
+      <h2 class="titulo mb-4">Explorá nuestras creaciones</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <img src="imagen/torta6.jpg" class="galeria-imagen" alt="Torta temática infantil">
+        </div>
+        <div class="col-md-4">
+          <img src="imagen/torta16.jpeg" class="galeria-imagen" alt="Torta elegante">
+        </div>
+        <div class="col-md-4">
+          <img src="imagen/torta17.jpg" class="galeria-imagen" alt="Torta con macarons">
+        </div>
+      </div>
+    </div>
+  </section>
+
 
   <!-- FOOTER -->
-  <footer class="bg-light text-center py-3">
-    <p>&copy; 2025 Pastelería</p>
+  <footer class="bg-light text-center py-4">
+    <div class="container">
+      <p class="mb-1">&copy; 2025 Pastelería Artesanal</p>
+      <div class="social-icons d-flex justify-content-center gap-3">
+        <a href="https://www.instagram.com" target="_blank">
+          <img src="imagen/IG.jpg" alt="Instagram" width="30">
+        </a>
+        <a href="https://wa.me/541125791162" target="_blank">
+          <img src="imagen/whatsapp.png" alt="WhatsApp" width="30">
+        </a>
+        <a href="https://www.facebook.com" target="_blank">
+          <img src="imagen/fb.jpg" alt="Facebook" width="30">
+        </a>
+      </div>
+    </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

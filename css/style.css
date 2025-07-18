@@ -6,32 +6,43 @@
 
 body {
   font-family: "Cookie", cursive;
-  background: #fffefc;
   color: #333;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  position: relative;
+  background-image: url(../imagen/flor.jpg);
+  background-size: contain;
+  background-repeat: repeat;
+  background-position: center;
+  z-index: 0;
+}
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 250, 246, 0.8);
+  z-index: -1;
+}
+body > * {
+  position: relative;
+  z-index: 1;
 }
 
+h2,
 p {
   font-family: "Cookie", cursive;
-  font-size: 1rem;
+  font-size: 40px;
   margin-bottom: 1rem;
   text-align: center;
 }
 
-body {
-  font-family: "Cookie", cursive;
-  background: #fffefc;
-  color: #333;
-}
-
-h2 {
-  font-family: "Cookie", cursive;
-  font-size: 35px;
-  margin-bottom: 1rem;
-  text-align: center;
-}
-
 p {
+  font-family: "Cookie", cursive;
   font-size: 25px;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 .titulo,
@@ -43,16 +54,21 @@ h1,
   text-align: center;
   font-weight: 700;
   margin-bottom: 1rem;
+  font-size: 45px;
+}
+
+img {
+  image-rendering: auto;
 }
 
 .formulario-contacto input,
 .formulario-contacto textarea {
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 .formulario-contacto label,
 form label {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: "Cookie", cursive;
   font-weight: bold;
 }
@@ -68,6 +84,16 @@ input {
   border-radius: 5px;
   border: 1px solid #ccc;
   max-width: 150px;
+}
+
+.btn-enviar {
+  background-color: #333;
+  border-color: #0a0a0a;
+  color: #fff;
+}
+.btn-enviar:hover {
+  background-color: #333;
+  border-color: #333;
 }
 
 .card {
@@ -104,52 +130,107 @@ input {
   width: 100%;
   padding: 15px;
   border-radius: 10px;
-  background-color: #f9f9f9;
+  background-color: hsl(40, 83%, 52%);
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
   font-family: "Cookie", cursive;
   font-size: 1.5em;
   text-align: center;
 }
 
-.galeria {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
+.galeria-fondo {
+  position: relative;
+  background-image: url(../imagen/flores.jpg);
+  background-size: contain;
+  background-repeat: repeat;
+  background-position: center;
+  z-index: 0;
+  padding: 2rem;
 }
-.galeria img {
+.galeria-fondo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 250, 246, 0.6);
+  z-index: -1;
+}
+.galeria-fondo > * {
+  position: relative;
+  z-index: 1;
+}
+.galeria-fondo .galeria-imagen {
   width: 100%;
-  height: 400px;
+  height: 350px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
-.galeria img:hover {
-  transform: scale(1.03);
+.galeria-fondo .galeria-imagen:hover {
+  transform: scale(1.05);
+}
+
+.escalon-1 {
+  margin-top: 30px;
+}
+
+.escalon-2 {
+  margin-top: 0px;
 }
 
 .fondo-seccion {
-  background-image: url("../pages/imagen/torta13.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  position: relative;
   padding: 60px 20px;
+  overflow: hidden;
+}
+.fondo-seccion .galeria-flotante {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.fondo-seccion .galeria-flotante .cinta-imagenes {
+  display: flex;
+  width: fit-content;
+  animation: moverGaleria 60s linear infinite;
+}
+.fondo-seccion .galeria-flotante .cinta-imagenes img {
+  width: 300px;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  margin-right: 10px;
+  flex-shrink: 0;
+  opacity: 1;
+  filter: none;
 }
 .fondo-seccion ul,
 .fondo-seccion li,
 .fondo-seccion strong,
 .fondo-seccion a {
-  font-family: "Ribeye Marrow", cursive !important;
+  font-family: "Cookie", cursive !important;
+  font-size: 25px;
 }
 
+@keyframes moverGaleria {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 .contacto-contenedor {
-  background-color: rgba(255, 255, 255, 0.85);
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
   padding: 30px;
   border-radius: 15px;
   max-width: 700px;
   margin: auto;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 .contacto-contenedor strong,
 .contacto-contenedor a {
@@ -170,6 +251,7 @@ input {
 }
 .navbar {
   font-family: "Cookie", cursive;
+  background-color: #e8ddca;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 .navbar .navbar-brand {
@@ -192,6 +274,44 @@ input {
 .navbar .nav-link.active {
   color: #a87c5f;
   font-weight: bold;
+}
+
+.hero {
+  position: relative;
+  height: 70vh;
+  overflow: hidden;
+}
+.hero .hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.7);
+}
+
+.imagen-cambio {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.imagen-cambio img {
+  width: 100%;
+  height: auto;
+  transition: opacity 1.5s ease;
+  display: block;
+}
+.imagen-cambio .img-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.imagen-cambio:hover .img-hover {
+  opacity: 1;
+}
+.imagen-cambio:hover .img-principal {
+  opacity: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

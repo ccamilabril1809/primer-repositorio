@@ -2,25 +2,38 @@
 
 body {
     font-family: $fuente-principal;
-    background: $color-fondo;
     color: $color-texto;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+
+    @include fondo-con-imagen('../imagen/flor.jpg', rgba(255, 250, 246, 0.8));
 }
 
-h2 {
+h2,
+p {
     font-family: $fuente-principal;
-    font-size: 35px;
+    font-size: 40px;
     margin-bottom: 1rem;
     text-align: center;
 }
 
 p {
+    font-family: $fuente-principal;
     font-size: 25px;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
-// Aplicar el mixin a los selectores de títulos
 .titulo,
 .titulos,
 h1,
 .card-title {
     @include titulo-principal;
+    font-size: 45px;
+}
+
+img {
+    image-rendering: auto;
 }
